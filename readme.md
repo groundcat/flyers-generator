@@ -25,15 +25,15 @@ To run the `ifttt_webhook.py` script, you will need the API keys for [IFTTT](htt
 
 ## Demo
 
-![](output.example\1_Rememberyo.jpg)
+![](https://raw.githubusercontent.com/groundcat/flyers-generator/main/output.example/1_Rememberyo.jpg)
 
-![](output.example\2_YoumatterY.jpg)
+![](https://raw.githubusercontent.com/groundcat/flyers-generator/main/output.example/2_YoumatterY.jpg)
 
-![](output.example\3_WefallWebr.jpg)
+![](https://raw.githubusercontent.com/groundcat/flyers-generator/main/output.example/3_WefallWebr.jpg)
 
-![](output.example\4_Youaremore.jpg)
+![](https://raw.githubusercontent.com/groundcat/flyers-generator/main/output.example/4_Youaremore.jpg)
 
-![](output.example\5_Allyouneed.jpg)
+![](https://raw.githubusercontent.com/groundcat/flyers-generator/main/output.example/5_Allyouneed.jpg)
 
-![](output.example\6_Takeitoned.jpg)
+![](https://raw.githubusercontent.com/groundcat/flyers-generator/main/output.example/6_Takeitoned.jpg)
 
