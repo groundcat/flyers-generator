@@ -1,0 +1,6 @@
+
+.env
+images/*
+output/*
+workspace.code-workspace
+*.jpg
