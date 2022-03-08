@@ -14,7 +14,7 @@ Generates flyers with captions from a csv file and a collection of background im
 
 ```
 pip install python-dotenv
-php install Pillow
+pip install Pillow
 ```
 
 ## Configuration
