@@ -25,7 +25,7 @@ CAPTIONS_COL_NAME = os.getenv('CAPTIONS_COL_NAME')
 TEXT_WIDTH_PERCENT = float(os.getenv('TEXT_WIDTH_PERCENT'))
 RESIZE_WIDTH = int(os.getenv('RESIZE_WIDTH'))
 
-# IMGBB config
+# ImgBB config
 IMGBB_KEY = os.getenv('IMGBB_KEY')
 
 # IFTTT config
