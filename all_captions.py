@@ -42,6 +42,9 @@ def main():
             caption = caption.replace("’","'")
             print(f"Caption: {caption}")
 
+            # Trim the text to remove whitespaces
+            caption = caption.strip()
+
             # Output file name
             output_name = ''.join(e for e in caption if e.isalnum())
             output_name = str(count) + "_" + output_name[:10] + ".jpg"
