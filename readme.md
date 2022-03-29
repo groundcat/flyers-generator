@@ -23,6 +23,24 @@ Create and edit the `.env` file based on the `.env.example` example file. Create
 
 To run the `ifttt_webhook.py` script, you will need the API keys for [IFTTT](https://help.ifttt.com/hc/en-us/articles/115010230347-Webhooks-service-FAQ) and [ImgBB](https://api.imgbb.com/) and create an IFTTT Applet with a webhook trigger. In my script,  `{{Value1}}` given in the webhook is the caption and `{{Value2}}` is the URL of the image uploaded to ImgBB.
 
+## CLI usage
+
+The scripts `random_caption_cli.py` and `ifttt_webhook_cli.py` support CLI arguments.
+
+Usage examples:
+
+```
+python3 ifttt_webhook_cli.py captions.csv original_EN fonts/Caveat/static/Caveat-Regular.ttf
+```
+
+```
+python3 ifttt_webhook_cli.py captions.csv translated_ZH fonts/CocaColaCareFont/CocaColaCareFont.ttf
+```
+
+```
+python3 ifttt_webhook_cli.py captions.csv translated_FR fonts/Caveat/static/Caveat-Regular.ttf
+```
+
 ## Demo
 
 ![](https://raw.githubusercontent.com/groundcat/flyers-generator/main/output.example/1_Rememberyo.jpg)
