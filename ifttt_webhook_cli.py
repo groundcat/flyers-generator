@@ -12,6 +12,8 @@ import json
 from dotenv import load_dotenv
 import shutil
 import sys
+import re
+
 
 # Usage: python3 ifttt_webhook_cli.py captions.csv original_EN fonts/Caveat/static/Caveat-Regular.ttf"
 
@@ -34,6 +36,9 @@ def main():
         # Deal with special chars
         caption = caption.replace("’","'")
         print(f"Caption: {caption}")
+
+        # Trim to remove whitespace
+        caption = caption.strip()
 
         # Output file name
         output_name = ''.join(e for e in caption if e.isalnum())
@@ -87,13 +92,22 @@ def edit_image(text, font, logo_font, output_name):
 
     # Create DrawText object
     draw = ImageDraw.Draw(im=img)
+    
 
     # Calculate the average length of a single character of our font.
     # Note: this takes into account the specific font and font size.
-    avg_char_width = sum(font.getsize(char)[0] for char in ascii_letters) / len(ascii_letters)
 
-    # Translate this average length into a character count
-    max_char_count = int(img.size[0] * TEXT_WIDTH_PERCENT / avg_char_width)
+    # Determine if the font contains Chinese characters
+    if re.search(u'[\u4e00-\u9fff]+', text):
+        # Chinese characters
+        max_char_count = 13
+
+    else:
+        # English characters
+        avg_char_width = sum(font.getsize(char)[0] for char in ascii_letters) / len(ascii_letters)
+
+        # Translate this average length into a character count
+        max_char_count = int(img.size[0] * TEXT_WIDTH_PERCENT / avg_char_width)
 
     # Create a wrapped text object using scaled character count
     text = textwrap.fill(text=text, width=max_char_count)
